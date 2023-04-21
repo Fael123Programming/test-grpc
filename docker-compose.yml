@@ -1,0 +1,14 @@
+# WARNING: Modifying this file will result in a failure!
+version: '3'
+
+services:
+  assessment-1:
+    image: gate.ipb.pt:5050/dsys-assessment-1:1.0.0
+    volumes:
+      - ./src:/src
+    environment:
+      token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxc3QgQXNzZXNzbWVudCIsInZhcmlhbnRUaXRsZSI6IlRyaWFuZ2xlIiwic3R1ZGVudE51bWJlciI6MzE0ODgzLCJzdHVkZW50TmFtZSI6IlJhZmFlbCIsImlzcyI6IkRTeXMiLCJ2YXJpYW50IjoidmFyaWFudC02IiwiaWF0IjoxNjgyMDg5NDgxLCJhc3Nlc3NtZW50SWQiOjMsImp0aSI6ImU5MjQ2YmQ2LTczYTItNGE0MS05YzMxLTFjM2U2YWQxNTQzOCIsIm1lbWJlcklkIjoxNjYyMX0.lfAdn7_Z3-GWIreVj491GNr4hSTzmbXWdjkXWqImSw4"
+      variant: "variant-6"
+    ports:
+      - "8989:8989"
+      - "8888:8888"

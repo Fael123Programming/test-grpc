@@ -1,0 +1,16 @@
+syntax = "proto3";
+option java_package = "pt.ipb.dsys.assessment1";
+option java_multiple_files = true;
+
+service Triangle {
+  rpc area (TriangleParam) returns (Scalar) {}
+}
+
+message Scalar {
+  double value = 1;
+}
+
+message TriangleParam {
+  double base = 1;
+  double height = 2;
+}
